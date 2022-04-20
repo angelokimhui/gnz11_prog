@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
 
 #define NmS 50
 #define NbS 15
@@ -23,5 +22,32 @@ int main(){
 		return 1;
 	}
 	
+	int destination_code,cust_creds;
+	char time_code,day_code;
+	printf("\nDestination of your call");
+	printf("    1. American Region");
+	printf("    2. Asian Region");
+	printf("    3. African Region");
+	printf("    4. European Region");
+	printf("Enter your choice : ");
+	scanf("%d",&destination_code);
+	printf("\nTime Code : ");
+	printf("    A. Daytime");
+	printf("    B. Nighttime");
+	printf("Enter your choice : ");
+	scanf("%c",&time_code);
+	printf("\nDay Code : ");
+	printf("    X. Weekdays");
+	printf("    Y. Weekends");
+	printf("Enter your choice : ");
+	scanf("%c",&day_code);
+	printf("Enter your available load/credits : ");
+	scanf("%d",&cust_creds);
+	
+	
+	printf("\nCustomer Name : %s",cust_name);
+	printf("\nCustomer Number : %s",cust_num);	
+	
+
 	return 0;
 }
