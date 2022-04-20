@@ -15,7 +15,7 @@ int main(){
 	if ((strlen(cust_name) > 0) && (cust_name[strlen (cust_name) - 1] == '\n')){
         	cust_name[strlen (cust_name) - 1] = '\0';
 	}
-	
+
 	printf("Customer Number : ");
 	scanf("%14s",cust_num);
 	if (strlen(cust_num)>13){
@@ -24,31 +24,36 @@ int main(){
 	}
 	
 	int destination_code,cust_creds;
-	char time_code,day_code;
+	char time_code,day_code,tmp;
+	
 	printf("\nDestination of your call");
-	printf("    1. American Region");
-	printf("    2. Asian Region");
-	printf("    3. African Region");
-	printf("    4. European Region");
-	printf("Enter your choice : ");
-	scanf("%d",&destination_code);
+	printf("\n    1. American Region");
+	printf("\n    2. Asian Region");
+	printf("\n    3. African Region");
+	printf("\n    4. European Region");
+	printf("\nEnter your choice : ");
+	scanf("%i",&destination_code);
+	
 	printf("\nTime Code : ");
-	printf("    A. Daytime");
-	printf("    B. Nighttime");
-	printf("Enter your choice : ");
-	scanf("%c",&time_code);
+	printf("\n    A. Daytime");
+	printf("\n    B. Nighttime");
+	printf("\nEnter your choice : ");
+	scanf(" %c",&time_code); // added space before %c as the buffer from scanf above causes newline which this syntax assumes as user input "enter".
+	
 	printf("\nDay Code : ");
-	printf("    X. Weekdays");
-	printf("    Y. Weekends");
-	printf("Enter your choice : ");
-	scanf("%c",&day_code);
-	printf("Enter your available load/credits : ");
+	printf("\n    X. Weekdays");
+	printf("\n    Y. Weekends");
+	printf("\nEnter your choice : ");
+	scanf(" %c",&day_code);	// same as line 41.
+	
+	printf("\nEnter your available load/credits : ");
 	scanf("%d",&cust_creds);
 	
 	system("clear");
 	printf("\nCustomer Name : %s",cust_name);
-	printf("\nCustomer Number : %s",cust_num);	
+	printf("\nCustomer Number : %s",cust_num);
+	printf("\nTemp : cust_creds : %d",cust_creds);	
 	
-
+	printf("\n");
 	return 0;
 }
