@@ -7,7 +7,7 @@
 
 int main(){
 
-	char cust_name[NmS],cust_num[NbS];
+	/*char cust_name[NmS],cust_num[NbS];
 	printf("Telephone System\n");
 	
 	printf("Customer Name : ");
@@ -53,6 +53,133 @@ int main(){
 	printf("\nCustomer Name : %s",cust_name);
 	printf("\nCustomer Number : %s",cust_num);
 	printf("\nTemp : cust_creds : %d",cust_creds);	
+	
+	*/
+	
+	//Calculations
+	
+	int destination_code=1;
+	char time_code='a',day_code='x';
+	float cust_creds=152;
+	
+	// AMERICA - per 3 mins
+	float america_weekdays_price_day=50.00;
+	float america_weekdays_price_night=45.00;
+	float america_weekends_price_day=40.00;
+	float america_weekends_price_night=38.00;
+	
+	// ASIA - per 2 mins
+	float asia_weekdays_price_day=30.00;
+	float asia_weekdays_price_night=27.00;
+	float asia_weekends_price_day=25.00;
+	float asia_weekends_price_night=15.00;
+	
+	// AFRICA - per 3 mins
+	float africa_weekdays_price_day=40.00;
+	float africa_weekdays_price_night=35.00;
+	float africa_weekends_price_day=35.00;
+	float africa_weekends_price_night=22.00;
+
+	// EUROPE - per 2 mins
+	float europe_weekdays_price_day=35.00;
+	float europe_weekdays_price_night=30.00;
+	float europe_weekends_price_day=20.00;
+	float europe_weekends_price_night=19.00;
+	
+	switch (destination_code) {
+		//AMERICA
+		case 1: if (time_code == 'A' || time_code == 'a') {
+				if(day_code == 'X' || day_code == 'x'){
+					float pricepermin=america_weekdays_price_day/3;
+					float mins=cust_creds/pricepermin;
+					float sec=mins*60;
+					int remaining=(int)sec%60;
+					if (remaining==0){
+						printf("You have %.0fmins calltime",mins);
+					}
+					else {
+						printf("You have %.0fmins and %dsecs calltime",mins,remaining); 
+					}
+					
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					float pricepermin=america_weekends_price_day/3;
+					float mins=cust_creds/pricepermin;
+					float sec=mins*60;
+					int remaining=(int)sec%60;
+					if (remaining==0){
+						printf("You have %.0fmins calltime",mins);
+					}
+					else {
+						printf("You have %.0fmins and %dsecs calltime",mins,remaining); 
+					}
+				}
+			}
+			else if (time_code == 'B' || time_code =='b'){
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			break;
+		//ASIA
+		case 2: if (time_code == 'A' || time_code == 'a') {
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			else if (time_code == 'B' || time_code =='b'){
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			break;
+		//AFRICA
+		case 3: if (time_code == 'A' || time_code == 'a') {
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			else if (time_code == 'B' || time_code =='b'){
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			break;
+		//EUROPE
+		case 4: if (time_code == 'A' || time_code == 'a') {
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			else if (time_code == 'B' || time_code =='b'){
+				if(day_code == 'X' || day_code == 'x'){
+					printf(" tas weekdays");
+				}
+				else if (day_code == 'Y' || day_code == 'y'){
+					printf(" tas weekends");
+				}
+			}
+			break;
+		default : printf("You've had input the wrong destination choice. Exiting..");break;
+	}
 	
 	printf("\n");
 	return 0;
