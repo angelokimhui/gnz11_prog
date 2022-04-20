@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
+
 #define NmS 50
 #define NbS 15
 
