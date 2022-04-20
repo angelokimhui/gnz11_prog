@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 #define NmS 50
 #define NbS 15
@@ -44,7 +45,7 @@ int main(){
 	printf("Enter your available load/credits : ");
 	scanf("%d",&cust_creds);
 	
-	
+	system("clear");
 	printf("\nCustomer Name : %s",cust_name);
 	printf("\nCustomer Number : %s",cust_num);	
 	
