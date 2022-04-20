@@ -1,2 +1,2 @@
 # gnz11_prog
-For school projects
+This repository is for my school projects and assignments incase I have to wipe my linux installation.
