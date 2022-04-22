@@ -6,33 +6,21 @@
 int main(){
 	srand(time(NULL));
 	int x_counter,y_counter;
-	int table[x][y],record[x][y],bomb[x][y],tmp=0;
+	int table[x][y],record[x][y],tmp=0;
 	for (x_counter=0;x_counter<x;x_counter++){
 		for(y_counter=0;y_counter<y;y_counter++){
 			table[x_counter][y_counter]=rand()%2;
 			record[x_counter][y_counter]=0;
-			//printf("This is table [%d][%d] = %d \n",x_counter,y_counter,table[x_counter][y_counter]);
 		}
 	}
-	
-	/*for (x_counter=0;x_counter<x;x_counter++){
-		for(y_counter=0;y_counter<y;y_counter++){
-			printf("%d ",table[x_counter][y_counter]);
-			if(y_counter==7){
-				printf("\n");
-			}
-		}
-	}*/
-	
 	int userx,usery;
 	do {
 		system("clear");
 		char userchoice;
-		printf("Minesweeper\n\n");
+		printf("\tMinesweeper\n\n");
 		printf("   0  1  2  3  4  5  6  7\n");
 		for (x_counter=0;x_counter<x;x_counter++){
 			for(y_counter=0;y_counter<y;y_counter++){
-				//printf("%d ",table[x_counter][y_counter]);
 				if(y_counter==0){
 					printf("%d ",tmp);
 					tmp++;
@@ -40,7 +28,6 @@ int main(){
 						printf("[?]");	
 					}
 					else if (record[x_counter][0]==1){
-						
 						printf("[ ]");
 					}
 					
@@ -50,10 +37,8 @@ int main(){
 						printf("[?]");	
 					}
 					else if (record[x_counter][y_counter]==1){
-						
 						printf("[ ]");
 					}
-					
 					if(y_counter==7){
 						printf("\n");
 					}
@@ -74,27 +59,27 @@ int main(){
 		else {
 			userx=(int)userchoice-48;
 		}
-		//printf("Value of X : %d\n",userx);
 		printf("Y coordinate : ");
 		scanf(" %d",&usery);
-		//printf("Value of Y : %d\n",usery);
 		record[userx][usery]=1;
-		//printf("%d",record[userx][usery]);
 	}while (record[userx][usery]!=table[userx][usery]);
 	
 	system("clear");
-	printf("Minesweeper\n\n");
+	printf("\tMinesweeper\n\n");
 	printf("   0  1  2  3  4  5  6  7\n");
 		for (x_counter=0;x_counter<x;x_counter++){
 			for(y_counter=0;y_counter<y;y_counter++){
-				//printf("%d ",table[x_counter][y_counter]);
 				if(y_counter==0){
 					printf("%d ",tmp);
 					tmp++;
 					if(record[x_counter][0]==0){
 						printf("[?]");	
 					}
-					else if (record[x_counter][0]==1){
+					else if (record[x_counter][0]==1&&table[x_counter][0]==0){
+						
+						printf("[ ]");
+					}
+					else if (record[x_counter][0]==1&&table[x_counter][0]==1){
 						
 						printf("[*]");
 					}
@@ -104,8 +89,10 @@ int main(){
 					if(record[x_counter][y_counter]==0){
 						printf("[?]");	
 					}
-					else if (record[x_counter][y_counter]==1){
-						
+					else if (record[x_counter][y_counter]==1&&table[x_counter][y_counter]==0){	
+						printf("[ ]");
+					}
+					else if (record[x_counter][y_counter]==1&&table[x_counter][y_counter]==1){	
 						printf("[*]");
 					}
 					
