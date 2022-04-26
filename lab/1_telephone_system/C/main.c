@@ -1,7 +1,10 @@
+/* Basic Calltime Calculator by GNz11(angelolim)
+ * Using KISS principle
+ * April 27, 2022
+ */
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-
 #define NmS 50
 #define NbS 15
 
@@ -9,6 +12,7 @@ float total_sec,cust_creds;
 int destination_code,min,seconds;
 char time_code,day_code,tmp;
 
+void output();
 void calculation();
 
 int main(){
@@ -45,61 +49,30 @@ int main(){
 	scanf(" %c",&day_code);	// same as line 41.
 	printf("\nEnter your available load/credits : ");
 	scanf(" %f",&cust_creds);
-	system("cls");
-	printf("\n Telephone System\n");
-	printf("==================\n");
-	printf("\nCustomer Name : %s\n",cust_name);
-	printf("Customer Number : %s\n",cust_num);
-
-	switch (destination_code) {
-		//AMERICA
-		case 1: calculation();
-                    if (seconds==0){
-						printf("You have %d mins calltime.\n",min);
-					}
-					else {
-                        printf("You have %d mins and %d secs of calltime.",min,seconds);
-					}
-					printf("\nTotal Charges : %.2f",cust_creds);
-                break;
-		//ASIA
-		case 2: calculation();
-                    if (seconds==0){
-						printf("You have %d mins calltime.\n",min);
-					}
-					else {
-                        printf("You have %d mins and %d secs of calltime.",min,seconds);
-					}
-					printf("\nTotal Charges : %.2f",cust_creds);
-                break;
-		//AFRICA
-		case 3: calculation();
-                    if (seconds==0){
-						printf("You have %d mins calltime.\n",min);
-					}
-					else {
-                        printf("You have %d mins and %d secs of calltime.",min,seconds);
-					}
-					printf("\nTotal Charges : %.2f",cust_creds);
-                break;
-		//EUROPE
-		case 4: calculation();
-                    if (seconds==0){
-						printf("You have %d mins calltime.\n",min);
-					}
-					else {
-                        printf("You have %d mins and %d secs of calltime.",min,seconds);
-					}
-					printf("\nTotal Charges : %.2f",cust_creds);
-                break;
-		default : printf("You've had input the wrong destination choice. Exiting..");break;
-	}
-	printf("\n\n==================");
+	output(&cust_name,&cust_num);
 	printf("\n");
 	exit(0);
 }
+
+void output(char *name,char *num){
+    system("cls");
+	printf("\n Telephone System\n");
+	printf("==================\n");
+	printf("\nCustomer Name : %s\n",name);
+	printf("Customer Number : %s\n",num);
+    calculation();
+    if (seconds==0){
+        printf("You have %d mins calltime.\n",min);
+    }
+    else {
+        printf("You have %d mins and %d secs of calltime.",min,seconds);
+    }
+    printf("\nTotal Charges : %.2f",cust_creds);
+	printf("\n\n==================");
+}
+
 void calculation(){
-    	//Calculations
+    //Rate (could be integrated to formula immediately but I decided to add something to the memory instead, exit(0) will take care of it tho)
 	// AMERICA - per 3 mins
 	int america_weekdays_price_day=50;
 	int america_weekdays_price_night=45;
