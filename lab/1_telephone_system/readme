@@ -14,15 +14,15 @@ WEEKDAYS
           DAYTIME CALLS:
 
                    1. AMERICAN REGION                  ₱50 EVERY 3 MINUTES
-                   2. ASIAN REGION                           ₱30 EVERY 2 MINUTES
-                   3. AFRICAN REGION                      ₱40 EVERY 3 MINUTES
+                   2. ASIAN REGION                     ₱30 EVERY 2 MINUTES
+                   3. AFRICAN REGION                   ₱40 EVERY 3 MINUTES
                    4. EUROPEAN REGION                  ₱35 EVERY 2 MINUTES
 
           NIGHTIME CALLS:
 
                    1. AMERICAN REGION                  ₱45 EVERY 3 MINUTES
-                   2. ASIAN REGION                           ₱27 EVERY 2 MINUTES
-                   3. AFRICAN REGION                      ₱36 EVERY 3 MINUTES
+                   2. ASIAN REGION                     ₱27 EVERY 2 MINUTES
+                   3. AFRICAN REGION                   ₱36 EVERY 3 MINUTES
                    4. EUROPEAN REGION                  ₱30 EVERY 2 MINUTES
 
 WEEKENDS
@@ -30,15 +30,15 @@ WEEKENDS
           DAYTIME CALLS:
 
                    1. AMERICAN REGION                  ₱40 EVERY 3 MINUTES
-                   2. ASIAN REGION                           ₱25 EVERY 2 MINUTES
-                   3. AFRICAN REGION                      ₱35 EVERY 3 MINUTES
+                   2. ASIAN REGION                     ₱25 EVERY 2 MINUTES
+                   3. AFRICAN REGION                   ₱35 EVERY 3 MINUTES
                    4. EUROPEAN REGION                  ₱20 EVERY 2 MINUTES
 
           NIGHTIME CALLS:
 
                    1. AMERICAN REGION                  ₱38 EVERY 3 MINUTES
-                   2. ASIAN REGION                           ₱15 EVERY 2 MINUTES
-                   3. AFRICAN REGION                      ₱22 EVERY 3 MINUTES
+                   2. ASIAN REGION                     ₱15 EVERY 2 MINUTES
+                   3. AFRICAN REGION                   ₱22 EVERY 3 MINUTES
                    4. EUROPEAN REGION                  ₱19 EVERY 2 MINUTES
 
 WRITE A PROGRAM THAT WOULD INPUT DESTINATION CODE (1-4), TIME CODE (A FOR DAY, B FOR NIGHT), DAY CODE (X FOR WEEKDAYS AND Y FOR WEEKENDS) AND THE CUSTOMER PHONE LOAD
