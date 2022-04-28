@@ -7,8 +7,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#define x 80
-#define y 25
+#define x 25
+#define y 80
 #define num_bombs 5
 #define max_hp 3
 #define max_moves 10
@@ -29,7 +29,7 @@ int main(){
 
 	//generate bombs (mark 1) and get their coordinates
 	for (int tmp_ctr=0;tmp_ctr<num_bombs;tmp_ctr++){
-        table[bomby[tmp_ctr]=rand()%80][bombx[tmp_ctr]=rand()%25]=1;
+        table[bomby[tmp_ctr]=rand()%25][bombx[tmp_ctr]=rand()%80]=1;
 	}
     //end generate bombs
 	int userx,usery;
@@ -43,7 +43,7 @@ int main(){
         }
         //end display bombas
 		printf("\n\t\t\t\tMinesweeper\n\n");
-		printf("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24\n");
+		printf("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 \n");
 		for (x_counter=0;x_counter<x;x_counter++){
 			for(y_counter=0;y_counter<y;y_counter++){
 				if(y_counter==0){
@@ -69,7 +69,7 @@ int main(){
 					else if (record[x_counter][y_counter]==1){
 						printf("[ ]");
 					}
-					if(y_counter==24){
+					if(y_counter==79){
 						printf("\n");
 					}
 				}
@@ -92,7 +92,7 @@ int main(){
 
 	system("cls");
 	printf("\n\t\t\t\tMinesweeper\n\n");
-		printf("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24\n");
+		printf("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 \n");
 		for (x_counter=0;x_counter<x;x_counter++){
 			for(y_counter=0;y_counter<y;y_counter++){
 				if(y_counter==0){
@@ -129,7 +129,7 @@ int main(){
                     else if(table[x_counter][y_counter]==1){
                         printf("[0]");
                     }
-                    if(y_counter==24){
+                    if(y_counter==79){
 						printf("\n");
 					}
 				}
