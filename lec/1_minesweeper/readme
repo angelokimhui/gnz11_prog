@@ -1,4 +1,0 @@
-# Minesweeper Game in CLI.
-
-main.c - primary C file
-mainexec - binary after compiling using gcc -o
